@@ -20,7 +20,7 @@ jobs:
       - run: npm run build
 
       - name: Check aws version
-        run: echo 'aws --version'
+        run: aws --version
 
 #      - uses: chrislennon/action-aws-cli@v1.1
       - name: Deploy to AWS
