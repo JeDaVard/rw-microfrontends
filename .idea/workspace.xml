@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48b2874-bd12-46cf-8c62-bea37a39205f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/marketing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/container.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/container.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/marketing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/marketing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/container/config/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/container/config/webpack.prod.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608711898001</updated>
-      <workItem from="1608711901310" duration="5664000" />
+      <workItem from="1608711901310" duration="6092000" />
     </task>
     <servers />
   </component>
