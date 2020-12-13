@@ -3,8 +3,8 @@ name: deploy-marketing
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'packages/marketing/**'
+#    paths:
+#      - 'packages/marketing/**'
 
 defaults:
   run:
