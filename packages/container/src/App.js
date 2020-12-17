@@ -16,10 +16,12 @@ export default () => {
           <BrowserRouter>
               <div>
                   <Header />
-                  <Switch>
-                      <Route path="/auth" component={AuthAppLazy}/>
-                      <Route path="/" component={MarketingAppLazy}/>
-                  </Switch>
+                  <React.Suspense fallback={<h1>Loading...</h1>}>
+                      <Switch>
+                          <Route path="/auth" component={AuthAppLazy}/>
+                          <Route path="/" component={MarketingAppLazy}/>
+                      </Switch>
+                  </React.Suspense>
               </div>
           </BrowserRouter>
       </StylesProvider>
