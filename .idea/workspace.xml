@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48b2874-bd12-46cf-8c62-bea37a39205f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/container/src/components/Progress.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/container/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/container/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,14 +27,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github/workflows" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/container/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/packages/container/src/components" />
+      <recent name="$PROJECT_DIR$/.github/workflows" />
       <recent name="$PROJECT_DIR$/packages/auth/src" />
       <recent name="$PROJECT_DIR$/packages/auth" />
     </key>
@@ -49,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608711898001</updated>
-      <workItem from="1608711901310" duration="15180000" />
+      <workItem from="1608711901310" duration="15365000" />
     </task>
     <servers />
   </component>
