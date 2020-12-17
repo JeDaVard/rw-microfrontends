@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48b2874-bd12-46cf-8c62-bea37a39205f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/auth/config/webpack.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/config/webpack.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/config/webpack.prod.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/src/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/src/components/Signin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/src/components/Signup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/auth/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/auth/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/auth/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/auth/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/auth/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/container/config/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/container/config/webpack.dev.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/marketing/config/webpack.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/marketing/config/webpack.dev.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +39,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.github/workflows" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/packages/container/src/components" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/container/src/components" />
+      <recent name="$PROJECT_DIR$/packages/auth/src" />
+      <recent name="$PROJECT_DIR$/packages/auth" />
       <recent name="$PROJECT_DIR$/.github/workflows" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -46,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608711898001</updated>
-      <workItem from="1608711901310" duration="11106000" />
+      <workItem from="1608711901310" duration="13192000" />
     </task>
     <servers />
   </component>
