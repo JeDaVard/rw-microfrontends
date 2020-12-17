@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import MarketingApp from './components/MarketingApp';
-import AuthApp from './components/AuthApp';
-import Header from "./components/Header";
 import {createGenerateClassName, StylesProvider} from "@material-ui/core/styles";
+import Header from "./components/Header";
+
+const AuthAppLazy = React.lazy(() => import('./components/AuthApp'))
+const MarketingAppLazy = React.lazy(() => import('./components/MarketingApp'))
 
 const makeUniqueClasses = createGenerateClassName({
     productionPrefix: 'container'
@@ -16,8 +17,8 @@ export default () => {
               <div>
                   <Header />
                   <Switch>
-                      <Route path="/auth" component={AuthApp}/>
-                      <Route path="/" component={MarketingApp}/>
+                      <Route path="/auth" component={AuthAppLazy}/>
+                      <Route path="/" component={MarketingAppLazy}/>
                   </Switch>
               </div>
           </BrowserRouter>
