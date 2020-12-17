@@ -4,9 +4,11 @@ import App from './App';
 import { createMemoryHistory, createBrowserHistory } from 'history'
 
 // Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   // defaultHistory is used for isolated mode (dev mode)
-  const history = defaultHistory || createMemoryHistory();
+  const history = defaultHistory || createMemoryHistory({
+    initialEntries: [initialPath]
+  });
   if (!!onNavigate) history.listen(onNavigate);
 
   ReactDOM.render(<App history={history}/>, el);
