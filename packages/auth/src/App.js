@@ -15,8 +15,8 @@ export default (props) => {
       <StylesProvider generateClassName={makeUniqueClasses}>
         <Router history={props.history}>
           <Switch>
-            <Route path="/auth/signin" component={Signin} />
-            <Route path="/auth/signup" component={Signup} />
+            <Route path="/auth/signin" render={() => <Signin onSignIn={props.onSignIn} />} />
+            <Route path="/auth/signup"><Signup onSignIn={props.onSignIn} /></Route>
           </Switch>
         </Router>
       </StylesProvider>

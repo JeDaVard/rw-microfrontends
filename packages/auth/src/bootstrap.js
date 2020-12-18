@@ -4,7 +4,7 @@ import App from './App';
 import { createMemoryHistory, createBrowserHistory } from 'history'
 
 // Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn }) => {
   // defaultHistory is used for isolated mode (dev mode)
   const history = defaultHistory || createMemoryHistory({
     // for "double click to navigate" issue
@@ -12,7 +12,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   });
   if (!!onNavigate) history.listen(onNavigate);
 
-  ReactDOM.render(<App history={history}/>, el);
+  ReactDOM.render(<App history={history} onSignIn={onSignIn} />, el);
 
   return {
     onParentNavigate: (location) => {

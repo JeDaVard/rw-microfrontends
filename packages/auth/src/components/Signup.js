@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -50,6 +50,20 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp({ onSignIn }) {
   const classes = useStyles();
 
+  const [form, setForm] = useState({
+    email: ''
+  })
+
+  const onFormChange = (e) => {
+    setForm(p => ({...p, email: e.target.value}))
+  }
+
+  const signUpHandler = () => {
+    onSignIn({
+      email: form.email
+    })
+  }
+
   return (
     <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
@@ -97,6 +111,7 @@ export default function SignUp({ onSignIn }) {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                onChange={onFormChange}
               />
             </Grid>
             <Grid item xs={12}>
@@ -124,7 +139,7 @@ export default function SignUp({ onSignIn }) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={onSignIn}
+            onClick={signUpHandler}
           >
             Sign Up
           </Button>

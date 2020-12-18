@@ -54,12 +54,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Header({ signedIn, onSignOut }) {
+export default function Header({ isSignedIn, onSignOut, currentUser }) {
   const classes = useStyles();
 
   const onClick = () => {
-    if (signedIn && onSignOut) {
-      onSignOut();
+    if (isSignedIn && onSignOut) {
+      onSignOut({
+        isSignedIn: false,
+        currentUser: {}
+      });
     }
   };
 
@@ -73,7 +76,7 @@ export default function Header({ signedIn, onSignOut }) {
       >
         <Toolbar className={classes.toolbar}>
           <Typography
-            variant="h6"
+            variant="h4"
             color="inherit"
             noWrap
             component={RouterLink}
@@ -81,15 +84,26 @@ export default function Header({ signedIn, onSignOut }) {
           >
             App
           </Typography>
+          {isSignedIn && (
+              <Typography
+                  variant="h6"
+                  color="inherit"
+                  noWrap
+                  component={RouterLink}
+                  to="/"
+              >
+                Hi, {currentUser.email}!
+              </Typography>
+          )}
           <Button
             color="primary"
             variant="outlined"
             className={classes.link}
             component={RouterLink}
-            to={signedIn ? '/' : '/auth/signin'}
+            to={isSignedIn ? '/' : '/auth/signin'}
             onClick={onClick}
           >
-            {signedIn ? 'Logout' : 'Login'}
+            {isSignedIn ? 'Logout' : 'Login'}
           </Button>
         </Toolbar>
       </AppBar>

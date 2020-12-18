@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {createGenerateClassName, StylesProvider} from "@material-ui/core/styles";
 import Header from "./components/Header";
@@ -12,14 +12,21 @@ const makeUniqueClasses = createGenerateClassName({
 })
 
 export default () => {
+    const [ authentication, setAuthentication ] = useState({
+        isSignIn: false,
+        currentUser: {}
+    })
+
   return (
       <StylesProvider generateClassName={makeUniqueClasses}>
           <BrowserRouter>
               <div>
-                  <Header />
+                  <Header currentUser={authentication.currentUser}
+                          isSignedIn={authentication.isSignIn}
+                          onSignOut={setAuthentication}/>
                   <React.Suspense fallback={<Progress />}>
                       <Switch>
-                          <Route path="/auth" component={AuthAppLazy}/>
+                          <Route path="/auth" render={() => <AuthAppLazy onSignIn={setAuthentication}/>} />
                           <Route path="/" component={MarketingAppLazy}/>
                       </Switch>
                   </React.Suspense>
