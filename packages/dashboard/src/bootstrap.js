@@ -1,38 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import { createMemoryHistory, createBrowserHistory } from 'history'
+import { createApp } from 'vue'
+import Dashboard from "./components/Dashboard";
 
 // Mount function to start up the app
-const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn }) => {
-  // defaultHistory is used for isolated mode (dev mode)
-  const history = defaultHistory || createMemoryHistory({
-    // for "double click to navigate" issue
-    initialEntries: [initialPath]
-  });
-  if (!!onNavigate) history.listen(onNavigate);
-
-  ReactDOM.render(<App history={history} onSignIn={onSignIn} />, el);
-
-  return {
-    onParentNavigate: (location) => {
-      const nextPathname = location.pathname
-      const pathname = history.location.pathname
-
-      if (pathname !== nextPathname) {
-        history.push(nextPathname)
-      }
-    }
-  }
+const mount = (el) => {
+  const app = createApp(Dashboard)
+  app.mount(el)
 };
 
 // If we are in development and in isolation,
 // call mount immediately
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_auth-dev-root');
+  const devRoot = document.querySelector('#_dashboard-dev-root');
 
   if (devRoot) {
-    mount(devRoot, { defaultHistory: createBrowserHistory() });
+    mount(devRoot);
   }
 }
 
