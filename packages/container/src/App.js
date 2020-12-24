@@ -6,6 +6,7 @@ import Progress from "./components/Progress";
 
 const AuthAppLazy = React.lazy(() => import('./components/AuthApp'))
 const MarketingAppLazy = React.lazy(() => import('./components/MarketingApp'))
+const DashboardAppLazy = React.lazy(() => import('./components/DashboardApp'))
 
 const makeUniqueClasses = createGenerateClassName({
     productionPrefix: 'container'
@@ -27,6 +28,7 @@ export default () => {
                   <React.Suspense fallback={<Progress />}>
                       <Switch>
                           <Route path="/auth" render={() => <AuthAppLazy onSignIn={setAuthentication}/>} />
+                          <Route path="/dashboard" component={DashboardAppLazy} />
                           <Route path="/" component={MarketingAppLazy}/>
                       </Switch>
                   </React.Suspense>
