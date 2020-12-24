@@ -3,8 +3,8 @@ name: deploy-auth
 on:
   push:
     branches: [ main ]
-#    paths:
-#      - 'packages/auth/**'
+    paths:
+      - 'packages/auth/**'
 
 defaults:
   run:

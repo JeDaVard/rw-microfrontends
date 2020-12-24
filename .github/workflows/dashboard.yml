@@ -3,8 +3,8 @@ name: deploy-dashboard
 on:
   push:
     branches: [ main ]
-#    paths:
-#      - 'packages/dashboard/**'
+    paths:
+      - 'packages/dashboard/**'
 
 defaults:
   run:
